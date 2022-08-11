@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1"
+             xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+    <persistence-unit name="UP_BK">
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+        <class>org.adria.metier.entities.Compte</class>
+        <properties>
+<!--            Hey body do not forget to put this line tms?createDatabaseIfNotExist=true-->
+            <property name="hibernate.connection.url" value="jdbc:mysql://localhost:3306/adriatestjpa?createDatabaseIfNotExist=true" />
+            <property name="hibernate.connection.username" value="root" />
+            <property name="hibernate.connection.password" value="" />
+            <property name="hibernate.connection.driver_class" value="com.mysql.cj.jdbc.Driver" />
+            <property name="hibernate.dialect" value="org.hibernate.dialect.MariaDBDialect" />
+            <property name="hibernate.hbm2ddl.auto" value="update" />
+            <property name="hibernate.show_sql" value="true" />
+<!--            <property name="hibernate.jdbc.use_get_generated_keys" value="true" />-->
+<!--            <property name="hibernate.jdbc.batch_size" value="10" />-->
+
+
+        </properties>
+    </persistence-unit>
+</persistence>
